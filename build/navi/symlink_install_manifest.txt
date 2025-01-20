@@ -6,8 +6,8 @@
 /home/jaegyun/slam_ws/install/navi/share/navi/launch/re_launch.py
 /home/jaegyun/slam_ws/install/navi/share/navi/map/ert.pgm
 /home/jaegyun/slam_ws/install/navi/share/navi/map/ert.yaml
-/home/jaegyun/slam_ws/install/navi/share/navi/map/fucking.pgm
-/home/jaegyun/slam_ws/install/navi/share/navi/map/fucking.yaml
+/home/jaegyun/slam_ws/install/navi/share/navi/map/map1.pgm
+/home/jaegyun/slam_ws/install/navi/share/navi/map/map1.yaml
 /home/jaegyun/slam_ws/install/navi/share/navi/map/rty.pgm
 /home/jaegyun/slam_ws/install/navi/share/navi/map/rty.yaml
 /home/jaegyun/slam_ws/install/navi/share/navi/map/wer.pgm
