@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root main_tree_to_execute="MainTree">
+
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            
+            
+                <Sequence>
+                    
+                    <Condition ID="goalposeCheck" value="goal1,goal2,goal3" />
+                    <Condition ID="goalTrigger" goal="{goal}" />
+                    
+                    <Fallback>
+                        <Sequence>
+                            <Condition ID="Isgoal" value="goal1" goal="{goal}" /> #응급실
+                            <SetBlackboard output_key="Goal" value="-1.0;-2.0;0.0;1.0" />
+                            <SubTree ID="MoveRobot" target="Goal" />
+                        </Sequence>
+                        <Sequence>
+                            <Condition ID="Isgoal" value="goal2" goal="{goal}" /> #수납
+                            <SetBlackboard output_key="Goal" value="0.0;0.0;0.0;0.0" />
+                            <SubTree ID="MoveRobot" target="Goal" />
+                        </Sequence>
+                        <Sequence>
+                            <Condition ID="Isgoal" value="goal3" goal="{goal}" /> #편의점
+                            <SetBlackboard output_key="Goal" value="23;1.0;0.0;1.0" />
+                            <SubTree ID="MoveRobot" target="Goal" />
+                        </Sequence>
+                        <Sequence>
+                            <Condition ID="Isgoal" value="goal4" goal="{goal}" /> #화장실
+                            <SetBlackboard output_key="Goal" value="23;1.0;0.0;1.0" />
+                            <SubTree ID="MoveRobot" target="Goal" />
+                        </Sequence>
+                        <Sequence>
+                            <Condition ID="Isgoal" value="goal4" goal="{goal}" /> #Origin
+                            <SetBlackboard output_key="Goal" value="0.0;0.0;0.0;1.0" />
+                            <SubTree ID="MoveRobot" target="Goal" />
+                            <!--<Condition ID="humanfollowing" />-->
+                        </Sequence>
+                    </Fallback>
+                    
+                </Sequence>
+            
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="MoveRobot">
+        <Sequence name="NavigateToGoal">
+            <Nav2Client goal="{target}" />
+            <Condition ID="goalcheckerpub" />
+            
+        </Sequence>
+    </BehaviorTree>
+
+</root>

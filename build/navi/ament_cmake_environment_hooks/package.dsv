@@ -1,0 +1,4 @@
+source;share/navi/local_setup.bash
+source;share/navi/local_setup.dsv
+source;share/navi/local_setup.sh
+source;share/navi/local_setup.zsh

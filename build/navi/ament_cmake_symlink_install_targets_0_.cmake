@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jaegyun/slam_ws/build/navi/goal_publisher" "/home/jaegyun/slam_ws/build/navi/bt_main" "TARGETS" "goal_publisher" "bt_main" "DESTINATION" "lib/navi")

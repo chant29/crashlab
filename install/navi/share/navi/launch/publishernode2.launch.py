@@ -1,0 +1,1 @@
+/home/jaegyun/slam_ws/src/navi/launch/publishernode2.launch.py
